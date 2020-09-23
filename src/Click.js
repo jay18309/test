@@ -4,11 +4,12 @@ import {Alert, Button} from 'react-native';
 
 export default function Click() {
 
-  let count = 0;
+  const [count, setCount] = useState(0);
   let countString = "count:"+count;
+
   function handleClick() {
+    setCount(count+1);
     Alert.alert("count:"+count);
-    count++;
 
   }
 
